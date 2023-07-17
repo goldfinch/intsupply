@@ -1,3 +1,7 @@
 ---
 Name: intsupply
 ---
+
+SilverStripe\SiteConfig\SiteConfig:
+  extensions:
+    - Goldfinch\Intsupply\Extensions\SiteConfigExtension
