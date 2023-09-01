@@ -42,6 +42,7 @@ class SiteConfigExtension extends DataExtension
         'Mailchimp' => 'Boolean',
         'MailchimpAPIKey' => EncryptedDBVarchar::class,
         'MailchimpListID' => EncryptedDBVarchar::class,
+        'MailchimpServer' => EncryptedDBVarchar::class,
 
         // 'HubSpot' => 'Boolean',
         // 'HubSpotAccessKey' => EncryptedDBVarchar::class,
@@ -135,6 +136,7 @@ class SiteConfigExtension extends DataExtension
                     FieldGroup::create(
 
                         TextField::create('MailchimpAPIKey', 'API Key')->addExtraClass('fcol-6'),
+                        TextField::create('MailchimpServer', 'Server')->addExtraClass('fcol-6'),
                         TextField::create('MailchimpListID', 'List ID')->addExtraClass('fcol-6'),
 
                     )->setDescription('refer to <a href="https://mailchimp.com/help/about-api-keys/" target="_blank">mailchimp.com/help/about-api-keys</a>'),
