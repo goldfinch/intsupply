@@ -32,6 +32,9 @@ class SiteConfigExtension extends DataExtension
         'GoogleAnalyticsGTM_ID' => 'Varchar',
         'GoogleAnalyticsGTAG_ID' => 'Varchar',
 
+        'YandexMetrika' => 'Boolean',
+        'YandexMetrika_ID' => 'Varchar',
+
         'FacebookPixel' => 'Varchar',
         'FacebookPixelTrackingID' => 'Varchar',
 
@@ -68,6 +71,16 @@ class SiteConfigExtension extends DataExtension
                     )->setDescription('refer to <a href="https://tagmanager.google.com/" target="_blank">tagmanager.google.com</a> | <a href="https://analytics.google.com/" target="_blank">analytics.google.com</a>'),
 
                 )->displayIf('GoogleAnalytics')->isChecked()->end(),
+            ),
+
+            CompositeField::create(
+
+                CheckboxField::create('YandexMetrika', 'Yandex Metrika'),
+                Wrapper::create(
+
+                    TextField::create('YandexMetrika_ID', 'ID')->setDescription('refer to <a href="https://metrica.yandex.com/" target="_blank">metrica.yandex.com</a>'),
+
+                )->displayIf('YandexMetrika')->isChecked()->end(),
             ),
 
             CompositeField::create(

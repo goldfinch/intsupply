@@ -67,6 +67,18 @@ class ScriptSupplier extends ViewableData
         }
     }
 
+    public function YandexMetrika()
+    {
+        $cfg = SiteConfig::current_site_config();
+
+        if ($cfg->YandexMetrika && $cfg->YandexMetrika_ID)
+        {
+            return $this->customise([
+                'TrackingID' => $cfg->YandexMetrika_ID,
+            ])->renderWith('Views/ScriptSupplies/YandexMetrika');
+        }
+    }
+
     /**
      * https://developers.google.com/recaptcha/docs/v3
      */
