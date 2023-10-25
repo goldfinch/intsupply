@@ -22,6 +22,7 @@ class ScriptSupplierTemplateProvider implements TemplateGlobalProvider
      */
     public static function ScriptSupplier($state = null) : ScriptSupplier
     {
+        // $raw = ScriptSupplier::create($state)->forTemplate()->RAW();
         return ScriptSupplier::create($state);
     }
 }
