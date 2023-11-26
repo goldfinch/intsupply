@@ -2,7 +2,6 @@
 
 namespace Goldfinch\Intsupply\Views;
 
-use Goldfinch\Intsupply\Models\SocialPost;
 use SilverStripe\View\ViewableData;
 use SilverStripe\SiteConfig\SiteConfig;
 use SilverStripe\ORM\FieldType\DBHTMLText;
