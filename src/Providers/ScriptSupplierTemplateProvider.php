@@ -12,15 +12,13 @@ class ScriptSupplierTemplateProvider implements TemplateGlobalProvider
      */
     public static function get_template_global_variables(): array
     {
-        return [
-            'ScriptSupplier',
-        ];
+        return ['ScriptSupplier'];
     }
 
     /**
      * @return boolean
      */
-    public static function ScriptSupplier($state = null) : ScriptSupplier
+    public static function ScriptSupplier($state = null): ScriptSupplier
     {
         // $raw = ScriptSupplier::create($state)->forTemplate()->RAW();
         return ScriptSupplier::create($state);

@@ -4,7 +4,6 @@ namespace Goldfinch\Intsupply\Views;
 
 use SilverStripe\View\ViewableData;
 use SilverStripe\SiteConfig\SiteConfig;
-use SilverStripe\ORM\FieldType\DBHTMLText;
 
 class ScriptSupplier extends ViewableData
 {
@@ -22,8 +21,7 @@ class ScriptSupplier extends ViewableData
     {
         $cfg = SiteConfig::current_site_config();
 
-        if ($cfg->FacebookPixel && $cfg->FacebookPixelTrackingID)
-        {
+        if ($cfg->FacebookPixel && $cfg->FacebookPixelTrackingID) {
             return $this->customise([
                 'TrackingID' => $cfg->FacebookPixelTrackingID,
             ])->renderWith('Views/ScriptSupplies/FacebookPixel');
@@ -34,8 +32,7 @@ class ScriptSupplier extends ViewableData
     {
         $cfg = SiteConfig::current_site_config();
 
-        if ($cfg->GoogleAnalytics && $cfg->GoogleAnalyticsGTAG_ID)
-        {
+        if ($cfg->GoogleAnalytics && $cfg->GoogleAnalyticsGTAG_ID) {
             return $this->customise([
                 'TrackingID' => $cfg->GoogleAnalyticsGTAG_ID,
             ])->renderWith('Views/ScriptSupplies/GTAG');
@@ -46,8 +43,7 @@ class ScriptSupplier extends ViewableData
     {
         $cfg = SiteConfig::current_site_config();
 
-        if ($cfg->GoogleAnalytics && $cfg->GoogleAnalyticsGTM_ID)
-        {
+        if ($cfg->GoogleAnalytics && $cfg->GoogleAnalyticsGTM_ID) {
             return $this->customise([
                 'TrackingID' => $cfg->GoogleAnalyticsGTM_ID,
             ])->renderWith('Views/ScriptSupplies/GTMHead');
@@ -58,8 +54,7 @@ class ScriptSupplier extends ViewableData
     {
         $cfg = SiteConfig::current_site_config();
 
-        if ($cfg->GoogleAnalytics && $cfg->GoogleAnalyticsGTM_ID)
-        {
+        if ($cfg->GoogleAnalytics && $cfg->GoogleAnalyticsGTM_ID) {
             return $this->customise([
                 'TrackingID' => $cfg->GoogleAnalyticsGTM_ID,
             ])->renderWith('Views/ScriptSupplies/GTMBody');
@@ -70,8 +65,7 @@ class ScriptSupplier extends ViewableData
     {
         $cfg = SiteConfig::current_site_config();
 
-        if ($cfg->YandexMetrika && $cfg->YandexMetrika_ID)
-        {
+        if ($cfg->YandexMetrika && $cfg->YandexMetrika_ID) {
             return $this->customise([
                 'TrackingID' => $cfg->YandexMetrika_ID,
             ])->renderWith('Views/ScriptSupplies/YandexMetrika');
@@ -85,8 +79,7 @@ class ScriptSupplier extends ViewableData
     {
         $cfg = SiteConfig::current_site_config();
 
-        if ($cfg->GoogleRecaptcha && $cfg->GoogleRecaptchaSiteKey)
-        {
+        if ($cfg->GoogleRecaptcha && $cfg->GoogleRecaptchaSiteKey) {
             return $this->customise([
                 'AutomaticBind' => $cfg->GoogleRecaptchaAutomaticBind,
                 'SiteKey' => $cfg->GoogleRecaptchaSiteKey,
@@ -98,8 +91,7 @@ class ScriptSupplier extends ViewableData
     {
         $cfg = SiteConfig::current_site_config();
 
-        if ($cfg->GoogleRecaptcha && $cfg->GoogleRecaptchaSiteKey)
-        {
+        if ($cfg->GoogleRecaptcha && $cfg->GoogleRecaptchaSiteKey) {
             return $this->customise([
                 'SiteKey' => $cfg->GoogleRecaptchaSiteKey,
             ])->renderWith('Views/ScriptSupplies/reCAPTCHAmeta');
@@ -113,8 +105,7 @@ class ScriptSupplier extends ViewableData
     {
         $cfg = SiteConfig::current_site_config();
 
-        if ($cfg->GoogleCloud && $cfg->GoogleCloudAPIKey)
-        {
+        if ($cfg->GoogleCloud && $cfg->GoogleCloudAPIKey) {
             return $this->customise([
                 'APIKey' => $cfg->GoogleCloudAPIKey,
             ])->renderWith('Views/ScriptSupplies/GoogleMap');
@@ -125,8 +116,7 @@ class ScriptSupplier extends ViewableData
     {
         $cfg = SiteConfig::current_site_config();
 
-        if ($cfg->HubSpot && $cfg->HubSpotPortalID && $cfg->HubSpotFormID)
-        {
+        if ($cfg->HubSpot && $cfg->HubSpotPortalID && $cfg->HubSpotFormID) {
             return $this->customise([
                 'PortalID' => $cfg->HubSpotPortalID,
                 'FormID' => $cfg->HubSpotFormID,
