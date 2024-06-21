@@ -4,11 +4,12 @@
     $GTAG
     $FacebookPixel
     $reCAPTCHAmeta
+    $GoogleCloudMeta
   <% else_if $SupplierState == 'BODY' %>
     $GTMBody
   <% else_if $SupplierState == 'FOOTER' %>
     $reCAPTCHA
-    $GoogleMap
+    <%-- $GoogleMap --%>
     <%-- $HubSpot --%>
   <% end_if %>
   <% end_cached %>

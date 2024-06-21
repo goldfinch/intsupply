@@ -112,6 +112,17 @@ class ScriptSupplier extends ViewableData
         }
     }
 
+    public function GoogleCloudMeta()
+    {
+        $cfg = SiteConfig::current_site_config();
+
+        if ($cfg->GoogleCloud && $cfg->GoogleCloudAPIKey) {
+            return $this->customise([
+                'APIKey' => $cfg->GoogleCloudAPIKey,
+            ])->renderWith('Views/ScriptSupplies/GoogleCloudMeta');
+        }
+    }
+
     public function HubSpot()
     {
         $cfg = SiteConfig::current_site_config();
